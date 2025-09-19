@@ -3,7 +3,7 @@ members = [
     ".",
     "crates/csv-converter",
     "crates/data-science"
-]
+, "crates/polars-tutorial"]
 
 [package]
 name = "cargo_tutorial"
