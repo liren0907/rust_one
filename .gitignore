@@ -71,5 +71,8 @@ release/
 *.so
 *.dylib
 
+# Example files
+data/
+
 # Un-published crates
 crates/data-science
