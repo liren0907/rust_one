@@ -73,6 +73,9 @@ release/
 
 # Example files
 data/
+model_weight/
+output/
+result/
 
 # Un-published crates
 crates/data-science

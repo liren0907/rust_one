@@ -1,0 +1,33 @@
+[package]
+name = "ort-tutorial"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "ort_tutorial"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ort-tutorial"
+path = "src/main.rs"
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.2.4", features = ["derive"] }
+image = { version = "0.24.7", default-features = false, features = ["jpeg", "png", "webp-encoder"] }
+ndarray = { version = "0.15.6" }
+anyhow = { version = "1.0.75" }
+regex = { version = "1.5.4" }
+rand = { version = "0.8.5" }
+half = { version = "2.3.1" }
+opencv = "0.93.7"
+rayon = "1.8.0"
+ort = { version = "1.16.3", features = ["download-binaries"] }
+lazy_static = "1.4"
+
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+## For target-cpu=native, set RUSTFLAGS or use .cargo/config.toml
